@@ -1,76 +1,105 @@
-% ------------------------------------------------------------
-%  UNIVERSITY OF BUCKINGHAM PhD THESIS TEMPLATE
-% ------------------------------------------------------------
-\documentclass[12pt,a4paper,oneside,openright]{report}
+% ==============================================================
+% UNIVERSITY OF BUCKINGHAM PhD THESIS
+% Non-Science | Harvard | 12pt TNR | 1.5 spacing
+% Compile: xelatex → biber → xelatex → xelatex
+% ==============================================================
 
-% ---------------------- PAGE LAYOUT -------------------------
-\usepackage[%
-  left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=1.5cm
-]{geometry}
+\documentclass[12pt,oneside]{report}
+\usepackage[a4paper, margin=20mm, top=25mm, bottom=25mm]{geometry}
 
-% ---------------------- FONT & LANGUAGE --------------------
-\usepackage{times}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+% Typography
+\usepackage{setspace}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\onehalfspacing
+\setlength{\parindent}{1.27cm}
 
-% ---------------------- MATHS & GRAPHICS -------------------
-\usepackage{amsmath,amssymb,amsthm}
+% Packages
+\usepackage{fancyhdr}
+\usepackage{titlesec}
 \usepackage{graphicx}
-\graphicspath{{figures/}}
-\usepackage{pdflscape}  % <-- for landscape tables/figures
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{csquotes}
+\usepackage{appendix}
 
-% ---------------------- REFERENCES -------------------------
-\usepackage[natbibapa]{apacite}
-\bibliographystyle{apacite}
+% Harvard Bibliography
+\usepackage[style=authoryear, backend=biber, sorting=nyt]{biblatex}
+\addbibresource{refs.bib}
 
-% ---------------------- HYPERLINKS ------------------------
-\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+% Page headers
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\slshape\leftmark}
+\fancyhead[LO,RE]{\slshape\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
 
-% ---------------------- TITLE PAGE ------------------------
+% Chapter style
+\titleformat{\chapter}[display]
+  {\normalfont\Large\bfseries\centering}{\chaptertitlename\ \thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{1.5em}{1em}
+
 \begin{document}
 
-\pagestyle{empty}
-\begin{center}
-  \vspace*{2cm}
-  {\LARGE\textbf{CORPORATE GOVERNANCE DEFICIENCIES AND NON-PERFORMING LOANS IN NIGERIAN DEPOSIT MONEY BANKS}}\\[1.5cm]
-  {\large by}\\[0.5cm]
-  {\Large Oluwaseun Isaiah Jimoh-Ibrahim}\\[2cm]
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE \textbf{Corporate Governance and Default Risk in Nigeria’s Deposit Money Banks}\par}
+\vspace{1cm}
+{\Large A Study of Post-Consolidation Reforms and Regulatory Clarity (2009–2025)\par}
+\vspace{2cm}
+{\Large Azii Isaiah Jimoh\par}
+\vspace{1cm}
+{\Large A thesis submitted for the degree of Doctor of Philosophy\par}
+\vspace{1cm}
+{\Large The University of Buckingham\par}
+\vspace{1cm}
+{\Large October 2025\par}
+\end{titlepage}
 
-  {\large A thesis submitted in partial fulfilment of the requirements\\
-          for the degree of\\
-          Doctor of Philosophy\\[1cm]
-          Department of Business and Finance\\
-          University of Buckingham}\\[2cm]
+% ========== FRONT MATTER (Roman) ==========
+\pagenumbering{roman}
 
-  {\large November 7, 2025}
-\end{center}
-\cleardoublepage
-\pagestyle{plain}
-
-% ---------------------- FRONT MATTER ----------------------
 \begin{abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-This thesis investigates corporate governance deficiencies and their impact on non-performing loans in Nigerian deposit money banks, using a mixed-methods approach.
+This thesis investigates corporate governance mechanisms in Nigeria’s deposit money banks and their impact on default risk (measured via non-performing loan ratios) from 2009 to 2024. Using panel fixed-effects models, mediation analysis, and difference-in-differences, it tests four research questions: the influence of governance indices, audit independence mediation via financial reporting quality, disclosure activation post-2014 reforms, and regulatory clarity’s causal effect on NPLs (2020–2025). Findings inform unified, enforceable governance frameworks aligned with Basel III and OECD standards.
 \end{abstract}
 
 \chapter*{Acknowledgements}
 \addcontentsline{toc}{chapter}{Acknowledgements}
-I would like to thank God. I'd like to thank my Family.
+I express profound gratitude to my supervisor, [Name], for invaluable guidance. I thank the University of Buckingham, Central Bank of Nigeria, and participating bank executives. This work is dedicated to my family.
 
 \tableofcontents
-\cleardoublepage
-\listoffigures
-\listoftables
-\cleardoublepage
 
-% ---------------------- CHAPTERS --------------------------
-\include{chapters/chapter1}
-\include{chapters/chapter2}
-\include{chapters/chapter3}
+\chapter*{Declaration of Originality and Prior Publication}
+\addcontentsline{toc}{chapter}{Declaration of Originality and Prior Publication}
+\label{decl-page}
 
-% ---------------------- BIBLIOGRAPHY ----------------------
+I hereby declare that this thesis is my own original work and has not been submitted elsewhere for a degree. All sources are acknowledged. No part has been previously published except as noted below:
+
+\begin{itemize}
+  \item Jimoh, A. I. (2024). ``Audit Independence and NPLs: A Mediation Study.'' \textit{Nigerian Journal of Banking}, under review.
+\end{itemize}
+
+% ========== MAIN TEXT (Arabic) ==========
 \cleardoublepage
-\bibliography{references}
+\pagenumbering{arabic}
+
+\input{chapters/chapter01}
+
+% \input{chapters/chapter02} % Add later
+
+% ========== APPENDICES ==========
+\begin{appendices}
+\chapter{Survey Questionnaire}
+Full 7-point Likert scale instrument used in 2024 data collection.
+\end{appendices}
+
+% ========== BIBLIOGRAPHY ==========
+\cleardoublepage
+\printbibliography[title=Bibliography]
 
 \end{document}
