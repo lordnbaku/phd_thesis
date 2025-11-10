@@ -1,0 +1,76 @@
+% ------------------------------------------------------------
+%  UNIVERSITY OF BUCKINGHAM PhD THESIS TEMPLATE
+% ------------------------------------------------------------
+\documentclass[12pt,a4paper,oneside,openright]{report}
+
+% ---------------------- PAGE LAYOUT -------------------------
+\usepackage[%
+  left=4cm, right=2.5cm, top=2.5cm, bottom=2.5cm, bindingoffset=1.5cm
+]{geometry}
+
+% ---------------------- FONT & LANGUAGE --------------------
+\usepackage{times}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ---------------------- MATHS & GRAPHICS -------------------
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{pdflscape}  % <-- for landscape tables/figures
+
+% ---------------------- REFERENCES -------------------------
+\usepackage[natbibapa]{apacite}
+\bibliographystyle{apacite}
+
+% ---------------------- HYPERLINKS ------------------------
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+% ---------------------- TITLE PAGE ------------------------
+\begin{document}
+
+\pagestyle{empty}
+\begin{center}
+  \vspace*{2cm}
+  {\LARGE\textbf{CORPORATE GOVERNANCE DEFICIENCIES AND NON-PERFORMING LOANS IN NIGERIAN DEPOSIT MONEY BANKS}}\\[1.5cm]
+  {\large by}\\[0.5cm]
+  {\Large Oluwaseun Isaiah Jimoh-Ibrahim}\\[2cm]
+
+  {\large A thesis submitted in partial fulfilment of the requirements\\
+          for the degree of\\
+          Doctor of Philosophy\\[1cm]
+          Department of Business and Finance\\
+          University of Buckingham}\\[2cm]
+
+  {\large November 7, 2025}
+\end{center}
+\cleardoublepage
+\pagestyle{plain}
+
+% ---------------------- FRONT MATTER ----------------------
+\begin{abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This thesis investigates corporate governance deficiencies and their impact on non-performing loans in Nigerian deposit money banks, using a mixed-methods approach.
+\end{abstract}
+
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{Acknowledgements}
+I would like to thank God. I'd like to thank my Family.
+
+\tableofcontents
+\cleardoublepage
+\listoffigures
+\listoftables
+\cleardoublepage
+
+% ---------------------- CHAPTERS --------------------------
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+
+% ---------------------- BIBLIOGRAPHY ----------------------
+\cleardoublepage
+\bibliography{references}
+
+\end{document}

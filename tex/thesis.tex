@@ -1,0 +1,101 @@
+%============================================================
+% main.tex - Fixed Version
+%============================================================
+\documentclass[12pt,a4paper]{report}
+
+% ---- MARGINS ----
+\usepackage{geometry}
+\geometry{left=4cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+% ---- FONT & SPACING ----
+\usepackage{times}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}  % For \textnaira
+
+% ---- TABLES & ROTATION ----
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{pdflscape} % For landscape pages
+
+% ---- FIGURES ----
+\usepackage{graphicx}
+\usepackage{caption}
+
+% ---- BIB ----
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{refs.bib}
+
+% ---- HYPERREF ----
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
+% ---- SECTION FORMAT ----
+\usepackage{titlesec}
+\titleformat{\chapter}{\normalfont\huge\bfseries}{\thechapter}{1em}{}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
+% ---- NAIRA ----
+\newcommand{\textnaira}{₦}
+
+% ---- TITLE PAGE ----
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2cm}
+  \Huge\bfseries Regulatory Multiplicity, Corporate Governance and Non-Performing Loans in Nigerian Deposit Money Banks \par
+  \vspace{2cm}
+  \Large\itshape A thesis submitted in partial fulfilment of the requirements for the degree of Doctor of Philosophy \par
+  \vspace{1.5cm}
+  \Large University of Buckingham \par
+  \vspace{2cm}
+  \large by \par
+  \vspace{0.5cm}
+  \Large\bfseries Your Full Name \par
+  \vfill
+  \large November 2025 \par
+\end{titlepage}
+
+% ---- FRONT MATTER ----
+\pagenumbering{roman}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Declaration}
+\chapter*{Declaration}
+This thesis is the result of my own work and includes nothing which is the outcome of work done in collaboration except where specifically indicated in the text. This thesis has not been submitted in whole or in part for any other degree or qualification at this or any other university.
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Abstract}
+\chapter*{Abstract}
+This study examines the impact of regulatory multiplicity on non-performing loans (NPLs) in Nigerian deposit money banks from 2009 to 2025. Using panel data from ten Tier-1 banks and 234 stakeholder surveys, it decomposes regulatory clarity’s effect into direct and compliance-mediated components via bootstrapped mediation. Findings reveal that post-2014 reforms activated disclosure potency, while audit independence significantly reduces NPLs through financial reporting integrity. Policy recommendations include unified governance codes and enhanced enforcement to align with Basel III and OECD standards.
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Acknowledgements}
+\chapter*{Acknowledgements}
+I express profound gratitude to my supervisor, Prof. [Name], for invaluable guidance. I thank the Central Bank of Nigeria and participating banks for data access. My deepest appreciation goes to my family for their unwavering support throughout this journey.
+
+\cleardoublepage
+\tableofcontents
+
+\cleardoublepage
+\listoffigures
+
+\cleardoublepage
+\listoftables
+
+% ---- MAIN ----
+\pagenumbering{arabic}
+\include{chapters/chapter1}
+
+% ---- REFS ----
+\cleardoublepage
+\printbibliography[title={References}]
+
+\end{document}
