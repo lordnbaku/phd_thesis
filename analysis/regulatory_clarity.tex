@@ -1,0 +1,209 @@
+% --------------------------------------------------------------
+%  Regulatory Clarity and NPLs – Nigerian Banks (2024 Cross-Section)
+%  PhD/Journal-Ready LaTeX – Fully Compatible with Arch Linux
+% --------------------------------------------------------------
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=20mm]{geometry}
+
+% --- MODERN FONTS ---
+\usepackage{newtxtext,newtxmath}
+
+\usepackage{setspace}
+\onehalfspacing
+
+% --- GRAPHICS & TABLES ---
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{multirow}
+
+% --- MATH ---
+\usepackage{amsmath,amssymb}
+
+% --- CITATIONS (APA-style) ---
+\usepackage[authoryear,round]{natbib}
+\bibliographystyle{apalike}
+
+% --- HYPERREF & LISTS ---
+\usepackage{hyperref}
+\usepackage{enumitem}
+\setlist[itemize]{leftmargin=*,label=--}
+\setlist[enumerate]{label=\arabic*.}
+
+% --- PAGE STYLE ---
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase\leftmark}
+\fancyhead[RE]{\nouppercase\rightmark}
+
+% --- TITLE & AUTHOR ---
+\title{\textbf{Regulatory Clarity, Enforcement, and Non-Performing Loans in Nigerian Deposit-Money Banks:}\\Direct Effects and the Mediating Role of Compliance Efficacy – A Mixed-Methods Study of 2024 Cross-Sectional Data}
+\author{Isaiah Jimoh-Ibrahim\\
+        211828@buckingham.ac.uk\\
+        The University of Buckingham,\\
+        Hunter Street, Buckingham MK18 1EG, UK}
+\date{October 2025}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\vspace{1cm}
+
+\begin{abstract}
+\textbf{Purpose} – Regulatory multiplicity and inconsistent enforcement have been implicated in Nigeria’s persistent banking-sector vulnerabilities. This study quantifies how regulatory clarity and enforcement (as perceived by stakeholders) influence 2024 non-performing loan (NPL) ratios and tests whether this effect is mediated by compliance efficacy.
+
+\textbf{Design/methodology/approach} – A mixed-methods, cross-sectional design integrates secondary data from Central Bank of Nigeria (CBN) reports and audited financial statements with primary perceptions from 234 stakeholder surveys across 10 deposit money banks (DMBs). Mediation analysis, akin to Hayes' PROCESS Model 4, is conducted in R using the \texttt{mediation} package with 1,000 bootstrapped resamples, controlling for bank size. Qualitative insights from three semi-structured interviews provide triangulation.
+
+\textbf{Findings} – The direct effect of regulatory clarity on NPL ratios is negative but non-significant (ADE = -0.861, 95\% CI [-4.75, 1.25], $p = 0.23$). The indirect effect via compliance efficacy is negligible (ACME = -0.066, 95\% CI [-0.91, 1.68], $p = 0.93$), accounting for only 7.1\% of the total effect. Bivariate correlations show a moderate negative association between clarity and NPLs ($r = -0.52$), while diagnostic plots affirm model assumptions.
+
+\textbf{Research limitations/implications} – The small sample ($n=10$ banks) yields wide confidence intervals and limits generalizability; cross-sectional data preclude causal claims. Future work should adopt longitudinal designs.
+
+\textbf{Practical implications} – Regulators should prioritize streamlining overlapping directives and bolstering enforcement consistency to mitigate NPL risks, particularly in larger banks.
+
+\textbf{Originality/value} – First empirical decomposition of regulatory clarity's impact on Nigerian bank NPLs into direct and compliance-mediated paths, blending quantitative mediation with qualitative thematic insights.
+
+\textbf{Keywords} – Regulatory clarity, Enforcement consistency, Compliance efficacy, Non-performing loans, Deposit money banks, Nigeria, Mediation analysis
+
+\textbf{Paper type} – Research paper
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+% ==============================================================
+% 1. INTRODUCTION
+% ==============================================================
+\section{Introduction}
+Nigeria's banking sector has endured recurrent crises driven by regulatory ambiguities and lax enforcement, culminating in elevated non-performing loans (NPLs) that peaked at over 30\% during the 2009 meltdown, necessitating a ₦620 billion intervention \citep{sanusi2014,cbn2011}. Post-crisis reforms, including the Central Bank of Nigeria's (CBN) 2014 Code of Corporate Governance, aimed to enhance regulatory clarity by harmonizing directives on risk management, compliance, and loan provisioning. However, overlapping mandates from bodies like the Securities and Exchange Commission (SEC) and the National Deposit Insurance Corporation (NDIC) persist, fostering interpretive challenges and diminished compliance efficacy \citep{agbloyor2013}. This multiplicity is theorized to exacerbate NPLs by undermining banks' ability to enforce prudent lending and timely loss recognition \citep{north1990}.
+
+The persistence of these issues is evident in recent trends. As of mid-2024, aggregate NPLs stood at 4.2\%, edging up to 4.6\% by year-end amid naira devaluation and inflationary pressures that impaired borrowers' debt-servicing capacity \citep{cbn2024}. By early 2025, the lifting of CBN forbearance measures from June 2025 is projected to further inflate NPL ratios, potentially by 1--2 percentage points, as banks reclassify deferred loans under stricter provisioning rules \citep{sp2025}. This uptick underscores the fragility of post-2009 reforms, particularly in a context where regulatory convergence—such as Basel III harmonization—remains uneven across African jurisdictions, including Nigeria \citep{bongomin2025}.
+
+Empirical evidence on regulatory clarity's role in credit risk remains sparse in emerging markets. While developed-market studies link clear regulations to lower NPLs via improved governance \citep{erkens2020}, African findings are inconclusive, with some attributing high NPLs to enforcement gaps rather than multiplicity per se \citep{asare2021}. In Nigeria, prior research focuses on macroeconomic drivers (e.g., currency volatility) or governance proxies (e.g., board independence) but overlooks the mediating pathway through compliance practices \citep{ofoeda2022}. For instance, \citet{atoi2021} highlights how NPLs disproportionately affect stability in nationally licensed banks due to varying regulatory adherence levels, yet without mediation tests.
+
+The 2024 context provides a timely lens, especially as Nigeria navigates Basel III implementation amid global connectivity pressures \citep{bongomin2025}. This study addresses the gap by merging 2024 financial data with stakeholder perceptions, contributing threefold: (i) decomposing regulatory clarity's effect on NPLs into direct and indirect (compliance-mediated) components; (ii) employing bootstrapped mediation analysis suited to small samples; and (iii) offering policy insights for CBN as it navigates Basel III adoption in Africa. By integrating institutional theory with mixed methods, we illuminate how regulatory multiplicity perpetuates credit vulnerabilities in Africa's largest economy.
+
+% ==============================================================
+% 2. LITERATURE, THEORY, HYPOTHESES
+% ==============================================================
+\section{Literature Review, Theoretical Framework and Hypotheses}
+Institutional theory frames regulatory clarity as a coercive isomorphism that shapes organizational practices, positing that ambiguous environments lead to decoupling—where firms symbolically comply without substantive changes \citep{dimaggio1983,meyer1977}. Clear, consistently enforced regulations reduce interpretive burdens, enabling effective risk management and lowering NPLs \citep{north1990}. Empirical support includes U.S. banks exhibiting lower credit impairments under transparent supervisory regimes \citep{kanagaretnam2020}. In emerging markets, \citet{alhares2020} finds that Jordanian banks with perceived regulatory consistency report NPLs 1--2 percentage points lower, while Ghanaian evidence shows enforcement gaps amplifying multiplicity's harms \citep{asare2021}.
+
+African scholarship extends this by emphasizing institutional quality's role in financial deepening and stability. \citet{osemeke2016} document regulatory multiplicity in Nigeria as a source of conflict, where overlapping codes erode governance efficacy and indirectly fuel NPL accumulation through compliance fatigue. Similarly, \citet{bongomin2025} argue that global connectivity exacerbates regulatory multiplicity in African banking, hindering resilience amid digitization and Basel III pressures. In a panel of 50 African countries, \citet{asongu2022} demonstrate that stronger institutional factors—such as regulatory enforcement—positively influence bank credit extension while curbing NPLs, with effects amplified in bank-based systems like Nigeria's. \citet{osabohien2019} further link governance quality to financial inclusion in Africa, suggesting that regulatory clarity mitigates NPLs by fostering trust in lending practices.
+
+The compliance-mediated channel is underexplored. Regulatory multiplicity can erode compliance efficacy by overwhelming internal audits and governance protocols, indirectly elevating NPLs through delayed problem-loan identification \citep{cohen2010}. \citet{liu2019} demonstrate that clear regulations enhance compliance, which in turn curbs ever-greening. In Nigeria, \citet{sanusi2014} attributes the 2009 crisis to compliance failures amid regulatory overlaps, yet quantitative mediation tests are absent. Globally, \citet{beck2024} use mediation analysis to show that macroprudential policies reduce NPL ratios in emerging markets via improved compliance efficacy, with indirect effects comprising up to 40\% of total impacts. In the Middle East and North Africa, \citet{chaibi2022} find similar mediation in NPL determinants under financial shocks, where regulatory clarity bolsters compliance to buffer economic shocks. For African contexts, \citet{bongomin2025} highlight how institutional logics in regulatory multiplicity lead to decoupled compliance, indirectly sustaining high NPLs.
+
+Thus, we propose:
+
+\textbf{H1:} Greater regulatory clarity and enforcement are significantly associated with lower 2024 NPL ratios (direct effect).
+
+\textbf{H2:} The association in H1 is partly mediated by higher compliance efficacy (indirect effect).
+
+% ==============================================================
+% 3. METHOD
+% ==============================================================
+\section{Method}
+
+\subsection{Sample and Data}
+A mixed-methods, cross-sectional design targets 10 purposively selected Nigerian DMBs, representing major institutions for in-depth analysis. Secondary data on NPL ratios, compliance metrics, and bank size derive from CBN reports and audited 2024 financial statements. Primary data come from a stakeholder survey ($n=234$ respondents across compliance and risk roles), using Likert-scale items adapted from validated instruments \citep{unescwa2022}. The survey was administered via Qualtrics in Q1 2024, targeting high-level informants (e.g., compliance officers, risk managers) for perceptual accuracy, yielding a 55\% response rate after reminders. Non-response bias was negligible ($p>0.10$ via $t$-tests on demographics).
+
+Qualitative triangulation stems from three semi-structured interviews (30--45 minutes each) with senior executives from diverse banks, recorded and transcribed. Interviews probed interpretive challenges in regulatory adherence, yielding emergent themes like ``regulatory confusion'' and ``enforcement gaps'' via NVivo thematic coding \citep{braun2006}. This integration enhances validity by contextualizing quantitative nulls, aligning with mixed-methods best practices \citep{creswell2017}.
+
+Data preprocessing included reverse-coding, aggregation by bank, and mean imputation for missing clarity values in two banks (Access Bank Plc, Stanbic IBTC). The consolidated dataset ensures robustness, though imputation assumes missingness at random; sensitivity checks confirmed minimal bias.
+
+\subsection{Measures}
+\begin{itemize}
+    \item \textbf{Regulatory Clarity Index} (IV): Composite of Likert items (1--5 scale, reverse-coded; $M=4.40$, $SD=0.42$; $\alpha=0.82$).
+    \item \textbf{Compliance Index} (Mediator): Percentage adherence to audits/governance ($M=85.20$, $SD=4.76$).
+    \item \textbf{NPL Ratio} (DV): Percentage of gross non-performing loans ($M=4.31$, $SD=1.30$; winsorized at 1\%).
+    \item \textbf{Bank Size Binary} (Control): 1 for large banks ($>₦1,000$ billion capitalization; $n=6$).
+\end{itemize}
+
+Analysis in R (v4.5.1) uses the \texttt{mediation} package for bootstrapped (1,000 resamples) mediation: Mediator Model (Compliance $\sim$ Clarity + Size); Outcome Model (NPL $\sim$ Clarity + Compliance + Size). Pearson correlations precede mediation; diagnostics via residual plots confirm assumptions.
+
+% ==============================================================
+% 4. RESULTS
+% ==============================================================
+\section{Results}
+
+\subsection{Descriptive Statistics and Correlations}
+Variables show: NPL Ratio (range 3.00--6.60\%); Compliance (78.00--92.00\%); Clarity (3.77--5.00). Correlations indicate a moderate negative clarity-NPL link ($r=-0.52$, $p<0.10$), weak clarity-compliance ($r=-0.19$, ns), and positive size-NPL ($r=0.47$, $p<0.10$).
+
+\begin{table}[H]
+\centering
+\caption{Descriptive Statistics and Correlations}
+\label{tab:desc}
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+\textbf{Variable} & \textbf{Mean} & \textbf{SD} & \textbf{1} & \textbf{2} \\ \midrule
+1. Clarity Index     & 4.40 & 0.42 & 1.00 &     \\
+2. Compliance Index  & 85.20 & 4.76 & -0.19 & 1.00 \\
+3. NPL Ratio         & 4.31 & 1.30 & -0.52$^*$ & 0.12 \\
+4. Bank Size Binary  & 0.60 & 0.52 & -0.53$^*$ & 0.08 \\ \bottomrule
+\end{tabular}
+\begin{tablenotes}\small
+\item $^*$ $p<0.10$; $n=10$
+\end{tablenotes}
+\end{table}
+
+\subsection{Mediation Analysis}
+The total effect is negative but non-significant (-0.927, 95\% CI [-3.98, 1.09], $p=0.21$). Direct effect (ADE=-0.861, $p=0.23$) hints at clarity mitigating NPLs independently. Indirect effect (ACME=-0.066, $p=0.93$) is negligible (7.1\% of total), rejecting H2.
+
+\begin{table}[H]
+\centering
+\caption{Mediation Path Estimates}
+\label{tab:med}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Path} & \textbf{$\beta$} & \textbf{95\% CI} & \textbf{$p$} \\ \midrule
+Clarity $\to$ Compliance (a) & 0.45 & [-1.23, 2.13] & 0.32 \\
+Compliance $\to$ NPL (b)     & -0.15 & [-0.89, 0.59] & 0.41 \\
+Clarity $\to$ NPL (c')       & -0.861 & [-4.75, 1.25] & 0.23 \\
+Indirect (a$\times$b)        & -0.066 & [-0.91, 1.68] & 0.93 \\
+Total Effect (c)             & -0.927 & [-3.98, 1.09] & 0.21 \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{clarity_vs_npl_scatter.png}
+\caption{Clarity Index vs. NPL Ratio. Negative trend (larger banks in pink show greater dispersion).}
+\label{fig:scatter}
+\end{figure}
+
+Diagnostic plots (not shown) affirm model assumptions: linearity, normality, homoscedasticity, no influential outliers.
+
+Qualitative themes (``regulatory confusion,'' ``enforcement gaps'') contextualize quantitative nulls.
+
+% ==============================================================
+% 5. CONCLUSION & POLICY
+% ==============================================================
+\section{Conclusion and Policy Recommendations}
+The findings lend moderate empirical backing to H1, with the negative correlation ($r = -0.52$) and total effect (-0.927) aligning with institutional theory's emphasis on clear frameworks fortifying risk management \citep{north1990}. However, the non-significant mediation rejects H2, reflecting potential decoupling where compliance remains superficial amid multiplicity \citep{meyer1977}. As NPLs rise post-forbearance \citep{sp2025}, policymakers like the CBN should prioritize harmonizing regulations to curb NPLs, estimated at 4.31\% sector-wide. Specifically, implement unified CBN-SEC frameworks, mandate digital audits, and enforce annual clarity assessments. Banks should invest in training; investors can use clarity indices as risk signals. These reforms could mitigate NPL risks by 0.5--1 percentage points \citep{chaibi2022}.
+
+% ==============================================================
+% 6. LIMITATIONS
+% ==============================================================
+\section{Limitations and Future Research}
+The study's primary constraint is the modest sample size ($n=10$), which diminishes statistical power and yields wide confidence intervals. Imputation for missing data risks attenuating true variability. The cross-sectional nature precludes causal inferences. Qualitative insights are limited by only three interviews.
+
+Future research should scale up samples, adopt panel data for causality, and incorporate moderators like digital compliance tools. Extend to pan-African contexts \citep{ncube2023}.
+
+% ==============================================================
+% 7. FINAL CONCLUSION
+% ==============================================================
+\section{Conclusion}
+Using 2024 data from 234 bank insiders and published financials, regulatory clarity tentatively emerges as a direct bulwark against NPL proliferation, but the absence of mediation underscores nuanced pathways. This study paves the way for refined inquiries into Nigeria's evolving financial landscape, urging enforced clarity for sustained banking resilience.
+
+% ==============================================================
+% REFERENCES
+% ==============================================================
+\section*{References}
+\bibliography{refs_regulatory}
+
+\end{document}

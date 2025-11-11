@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2026/dev/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: regulatory_clarity.aux
+The style file: apalike.bst
+Database file #1: refs_regulatory.bib
+You've used 26 entries,
+            1935 wiz_defined-function locations,
+            624 strings with 7334 characters,
+and the built_in function-call counts, 9188 in all, are:
+= -- 943
+> -- 284
+< -- 27
++ -- 94
+- -- 86
+* -- 751
+:= -- 1631
+add.period$ -- 80
+call.type$ -- 26
+change.case$ -- 168
+chr.to.int$ -- 26
+cite$ -- 26
+duplicate$ -- 348
+empty$ -- 676
+format.name$ -- 138
+if$ -- 1785
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 23
+newline$ -- 135
+num.names$ -- 78
+pop$ -- 99
+preamble$ -- 1
+purify$ -- 165
+quote$ -- 0
+skip$ -- 284
+stack$ -- 0
+substring$ -- 710
+swap$ -- 22
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 152
+warning$ -- 0
+while$ -- 84
+width$ -- 0
+write$ -- 344
