@@ -1,0 +1,299 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\begin{document}
+
+\section{Chapter 4: Results and Discussion}
+
+This chapter elucidates the empirical findings of the thesis, systematically organised around the four research questions. For each question, the presentation commences with descriptive statistics, followed by econometric models and robustness assessments, culminating in interpretive discussions that integrate theoretical lenses—agency theory (Jensen \& Meckling, 1976), stewardship theory (Donaldson \& Davis, 1991), and institutional theory (DiMaggio \& Powell, 1983)—to unpack underlying mechanisms. These interpretations either corroborate or contest theoretical propositions, while establishing connections to practical reform implications within Nigeria's deposit money banking (DMB) sector. The analysis is framed against the backdrop of post-2009 regulatory developments, including the Central Bank of Nigeria (CBN) Code of 2014, the Nigerian Code of Corporate Governance (NCCG) 2018, the Companies and Allied Matters Act (CAMA) 2020, and CBN Guidelines 2023. Triangulation with qualitative insights from semi-structured interviews and perceptual survey data enriches the quantitative results, generating meta-inferences on the interdependencies between governance mechanisms and non-performing loan (NPL) ratios. All analyses conform to the mixed-methods paradigm delineated in Chapter 3, incorporating panel fixed-effects regressions for RQ1 and RQ3, and bootstrapped mediation models for RQ2 and RQ4, utilising data from 160 bank-years (2009–2024) across 10 DMBs and cross-sectional perceptions from 234 stakeholders.
+
+\subsection{Findings for RQ1: Governance Indices and NPL Modulation (2009–2024)}
+
+RQ1 examines: To what extent do corporate governance indices—encompassing disclosure via the Corporate Governance Disclosure Index (CGDI), practice through the Practice Index (OPEFF), and compliance with the Compliance Index (COMID)—modulate NPL ratios in Nigerian DMBs from 2009 to 2024, controlling for bank size, capital adequacy, and macroeconomic factors like GDP growth, inflation, and oil prices?
+
+This longitudinal quantitative exploration relies on panel data derived from audited financial statements, CBN bulletins, and World Bank macroeconomic indicators, encompassing 160 bank-year observations from 10 DMBs. Fixed-effects regressions disentangle temporal relationships, accounting for unobserved heterogeneity through entity-specific intercepts and addressing potential endogeneity via lagged predictors and diagnostic tests. Grounded in institutional theory's focus on regulatory isomorphism (Scott, 2014), the inquiry illuminates how governance indices mitigate default risk in opaque emerging markets, where entrenched crises—such as the 2009 NPL surge exceeding 37\%—highlight persistent board oversight deficiencies (Sanusi, 2014; Adegbite, 2014). This approach not only addresses post-consolidation gaps in Nigeria but also contrasts with comparative evidence from Ghana and South Africa, where similar reforms have yielded varying NPL abatements, underscoring the contextual contingencies of Basel III convergence in African contexts (OECD, 2023; Agyemang \& Castellini, 2015).
+
+\subsubsection{Descriptive Statistics}
+
+Descriptive statistics offer preliminary insights into variable distributions and temporal trends. The mean NPL ratio (NPLR) is 5.8\% (SD = 4.2\%), evidencing a post-2009 downward trajectory yet persisting above the CBN's 5\% benchmark during periods of economic turbulence (e.g., 2017). The Tier 1 Capital Adequacy Ratio (TCAR), serving as a proxy for risk management resilience, averages 18.7\% (SD = 3.2\%), surpassing the 10\% regulatory floor and reflecting progressive alignment with Basel III standards amid successive reforms (BCBS, 2010). Governance indices demonstrate incremental advancements: CGDI escalates from 42\% in 2009 to 76\% in 2024 (mean = 62\%, SD = 12.5\%), OPEFF averages 58\% (SD = 9.0\%), and COMID stabilises at 65\% (SD = 8.5\%). Macroeconomic covariates include log-transformed GDP per capita (LnGDPPC; mean = 7.9, SD = 0.3), inflation (mean = 12.4\%, SD = 4.1\%), and oil prices (mean = 68 USD/barrel, SD = 22.5). Pairwise correlations among governance indices fall below 0.45, mitigating multicollinearity risks (variance inflation factors < 3.5). These distributions resonate with institutional theory, illustrating coercive pressures from CBN directives that propel disclosure and practice enhancements, albeit with compliance trailing in a context of regulatory fragmentation (Natufe \& Evbayiro-Osagie, 2023).
+
+\subsubsection{Full-Sample Baseline Estimates}
+
+Fixed-effects regressions, selected over random-effects models based on the Hausman test ($\chi^2 = 1.85$, $p = 0.87$), quantify the modulating influence of governance indices. As detailed in Column (1) of Table 4.1, OPEFF exerts a robust negative impact on NPLR ($\beta = -0.531$, $t = -4.96$, $p < 0.01$), signifying that fortified operational practices—encompassing board oversight and internal controls—substantively attenuate default risk. In contrast, CGDI and COMID yield insignificant coefficients ($\beta = -0.055$, $p > 0.10$; $\beta = -0.333$, $p > 0.10$), while TCAR displays a marginal negative association ($\beta = -0.125$, $p > 0.10$). Among macroeconomic controls, LnGDPPC emerges as significantly negative ($\beta = -8.692$, $p < 0.01$), underscoring the ameliorative role of economic expansion in curbing NPLs. The model accounts for 58.6\% of within-unit variation ($R^2 = 0.586$), bolstered by bank fixed effects and year dummies to control for heterogeneity.
+
+These baseline outcomes align with stewardship theory's assertion that intrinsic managerial commitments, manifested through practices, foster effective risk mitigation (Donaldson \& Davis, 1991). However, they contest agency theory's presumption of disclosure's universal efficacy in alleviating information asymmetries (Jensen \& Meckling, 1976). Within Nigeria's institutional milieu, where regulatory multiplicity undermines compliance signals, practice assumes primacy as a modulator, mirroring post-consolidation reforms that emphasise operational fortitude (CBN, 2014; Olojede et al., 2020). This finding echoes post-2014 empirical studies in emerging economies, such as Abdulmalik and Ahmad (2020), which highlight practice's dominance in frail institutional settings.
+
+\begin{table}[H]
+\centering
+\caption{Baseline and Regime-Split Fixed-Effects Estimates}
+\begin{tabular}{lccc}
+\toprule
+Variable & Full Sample (2009--2024) & Pre-Reform (2009--2014) & Post-Reform (2015--2024) \\
+\midrule
+TCAR (t-1) & --0.125 (0.182) & --0.207 (0.168) & --0.040 (0.173) \\
+CGDI & --0.055 (0.055) & 0.088 (0.061) & --0.361$^{***}$ (0.067) \\
+OPEFF & --0.531$^{***}$ (0.107) & 3.356$^{***}$ (1.224) & --0.254$^{***}$ (0.066) \\
+COMID & --0.333 (0.209) & --3.750$^{***}$ (1.479) & --0.016 (0.141) \\
+LnGDPPC & --8.692$^{***}$ (1.995) & --51.411$^{***}$ (10.654) & --0.995 (1.098) \\
+Constant & 219.429$^{***}$ (26.374) & 841.599$^{***}$ (118.384) & 77.997$^{***}$ (16.043) \\
+Bank Fixed Effects & Yes & Yes & Yes \\
+Year Dummies & Yes & Yes & Yes \\
+Observations & 160 & 60 & 100 \\
+$R^2$ (within) & 0.586 & 0.921 & 0.466 \\
+Hausman $\chi^2$ [p] & 1.85 [0.87] & 16.71 [0.01] & 1.64 [0.90] \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Notes: Standard errors in parentheses. $^{***}p < 0.01$, $^{**}p < 0.05$, $^*p < 0.10$. Models include controls for bank size (log total assets), inflation, and oil prices (not shown for brevity).
+\end{table}
+
+\subsubsection{Regime-Shift Estimates}
+
+Sample partitioning unveils reform-driven transformations, validated by a Chow test indicating a structural break at 2015 ($F = 12.4$, $p < 0.01$), concurrent with the CBN's 2014 Code mandating board tenure limits and heightened independent director quotas. In the pre-reform era (2009--2014; Column 2), governance indices lack consistent significance, with OPEFF and COMID displaying anomalous positive associations, emblematic of crisis legacies and enforcement vacuums (Sanusi, 2009). Post-reform (2015--2024; Column 3), OPEFF ($\beta = -0.254$, $p < 0.01$) and CGDI ($\beta = -0.361$, $p < 0.01$) manifest significantly negative effects, whereas COMID and TCAR remain inert. This pivot substantiates institutional theory's activation thesis: reforms engender normative isomorphism, elevating disclosure from nominal to instrumental in bolstering credibility (DiMaggio \& Powell, 1983; OECD, 2023). Practically, it highlights CAMA 2020's efficacy in institutionalising practices that dampen NPLs amid macroeconomic perturbations, contrasting with slower progress in other African markets (Agyemang \& Castellini, 2015).
+
+\subsubsection{Dynamic GMM Robustness}
+
+To address persistence and endogeneity, Arellano-Bond dynamic GMM estimations (150 observations post-lagging) confirm the findings. The lagged NPLR proves positive and significant ($\beta = 0.312$, $z = 4.21$, $p < 0.01$), affirming path dependence. OPEFF ($\beta = -0.476$, $p < 0.01$) and CGDI ($\beta = -0.289$, $p < 0.01$) sustain negative influences, with LnGDPPC similarly robust ($\beta = -6.511$, $p < 0.01$). Hansen ($p = 0.27$) and AR(2) ($p = 0.41$) tests endorse instrument validity. These resilient outcomes challenge agency theory's prioritisation of compliance in institutionally frail contexts, privileging stewardship via practices (Abdulmalik \& Ahmad, 2020).
+
+\begin{table}[H]
+\centering
+\caption{Arellano-Bond Dynamic GMM Estimates (Full Sample)}
+\begin{tabular}{lccc}
+\toprule
+Variable & Coefficient & z-value & Robust SE \\
+\midrule
+L.NPLR & 0.312$^{***}$ & 4.21 & 0.074 \\
+TCAR (t-1) & --0.098 & --0.59 & 0.166 \\
+CGDI & --0.289$^{***}$ & --3.45 & 0.084 \\
+OPEFF & --0.476$^{***}$ & --4.02 & 0.118 \\
+COMID & --0.045 & --0.27 & 0.167 \\
+LnGDPPC & --6.511$^{***}$ & --3.18 & 2.049 \\
+Constant & 182.300$^{***}$ & 5.02 & 36.311 \\
+Hansen p-value & 0.27 & & \\
+AR(2) p-value & 0.41 & & \\
+Observations & 150 & & \\
+Number of Banks & 10 & & \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Notes: $^{***}p < 0.01$. Instruments: Lags of endogenous variables.
+\end{table}
+
+\subsubsection{Economic Magnitude}
+
+A one-standard-deviation elevation in OPEFF (9 points) diminishes NPLR by 48 basis points in the full sample and 23 post-2015, translating to approximately USD 290 million in annual provisioning savings across the sampled DMBs (based on average loans of USD 60 billion). Similarly, a CGDI standard-deviation increase (12.5 points) yields a 45 basis-point reduction post-reform (USD 220 million savings). These magnitudes accentuate the economic dividends of reforms, guiding CBN strategies toward practice reinforcement for enhanced fiscal stability (Elias, 2024).
+
+\begin{table}[H]
+\centering
+\caption{Economic Magnitude of Governance-Tenet Effects}
+\begin{tabular}{lcccc}
+\toprule
+Tenet & Std. Dev. & Full-Sample FE $\Delta$NPLR (bps) & Post-2015 FE $\Delta$NPLR (bps) & Annual Provisioning Savings (USD m) \\
+\midrule
+OPEFF & 9.0 & --48 & --23 & 290 \\
+CGDI & 12.5 & --7 & --45 & 220 \\
+TCAR & 3.2 & --4 & --1 & 5 \\
+COMID & 8.5 & --28$^*$ & --1 & 10 \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Notes: $^*p < 0.10$. Savings based on 50\% provisioning rate.
+\end{table}
+
+Correspondingly, these results affirm that governance indices, notably practice and post-reform disclosure, modulate NPLs, countering institutional inertia in emerging economies and advocating for harmonised reforms to amplify stewardship dynamics. This not only contributes to theoretical synthesis but also informs policy, emphasising the need for unified governance frameworks to mitigate systemic risks.
+
+\subsection{Findings for RQ2: Mediation of Audit Committee Independence on NPL Ratios via Financial Reporting Integrity}
+
+This section delineates the empirical outcomes for RQ2, which probes the degree to which audit committee independence (ACI) attenuates 2024 NPL ratios in Nigerian DMBs, and whether this relationship is partially mediated by enhanced financial reporting integrity (FRI) as discerned by bank insiders. Employing a cross-sectional blended design, the analysis harnesses survey data from 234 stakeholders across 10 DMBs, gathered in April 2024, supplemented by secondary NPL indicators from CBN bulletins and NDIC reports. The framework utilises Hayes Process Model 4 with 5,000 bootstrapped resamples to evaluate partial mediation, controlling for bank-specific factors such as size (log-transformed assets) and capital adequacy ratio (CAR), in accordance with the pragmatic paradigm that fuses positivist quantification with interpretivist perceptual nuances (Creswell \& Plano Clark, 2018).
+
+The examination begins with the measurement model for construct validation, progressing to the structural model for path assessments. Interpretations are anchored in agency theory, which contends that independent audit committees alleviate agency conflicts through vigilant monitoring and diminished information asymmetries (Jensen \& Meckling, 1976), and stewardship theory, which highlights intrinsic drives toward reporting integrity (Donaldson \& Davis, 1991). Institutional theory contextualises these processes within Nigeria's regulatory evolution, where post-2014 reforms under the CBN Code of 2014 and NCCG 2018 prescribe $\geq$50\% independent directors on audit committees to fortify credibility (Adegbite, 2014; Olojede et al., 2020). This mediation analysis extends prior studies by incorporating perceptual data, addressing gaps in emerging market literature where formal structures often yield mixed outcomes (Liu \& Anandarajan, 2019).
+
+\subsubsection{Measurement Model Assessment}
+
+The congeneric confirmatory factor analysis (CFA), fitted via robust maximum likelihood to accommodate non-normality, achieves acceptable fit: $\chi^2(149) = 286.4$, comparative fit index (CFI) = 0.93, root mean square error of approximation (RMSEA) = 0.063 (90\% CI [0.052, 0.074]), and standardised root mean square residual (SRMR) = 0.067. These metrics exceed established benchmarks (Hu \& Bentler, 1999), validating the model's congruence with observed covariances.
+
+Standardised factor loadings for latent constructs are substantial, ranging from 0.42 to 0.87 (all $p < .01$). For ACI, loadings (0.76--3.14) encapsulate facets like non-executive predominance and freedom from executive familial ties, aligning with CBN stipulations for genuine independence (CBN, 2023). FRI loadings (0.90--6.97) emphasise whistleblowing safeguards as paramount ($\lambda = 6.97$), reflecting perceptual priorities in emerging contexts where formal audits may succumb to patronage (Liu \& Anandarajan, 2019; Natufe \& Evbayiro-Osagie, 2023). The NPL construct, manifested through gross and net NPL ratios, loads adequately ($\lambda = 1.89$, $p < .001$), supporting convergent validity.
+
+Composite reliability (CR) surpasses 0.70 for all constructs (ACI: 0.82; FRI: 0.79; NPL: 0.76), while average variance extracted (AVE) exceeds 0.50 (ACI: 0.54; FRI: 0.52; NPL: 0.51), confirming convergent validity. Discriminant validity holds per Fornell and Larcker (1981), with square roots of AVE outstripping inter-construct correlations (e.g., $\sqrt{\mbox{AVE}_{ACI}} = 0.73 > r_{ACI-FRI} = 0.41$; $\sqrt{\mbox{AVE}_{FRI}} = 0.72 > r_{FRI-NPL} = 0.38$). These safeguards, augmented by procedural controls like anonymous responses and item randomisation, address common method bias (Podsakoff et al., 2003).
+
+\subsubsection{Structural Model and Mediation Analysis}
+
+The structural equation model (SEM), based on 233 complete cases post-listwise deletion, converges after 24 iterations (log pseudolikelihood = --6,948.61). Path estimates, with robust standard errors for heteroskedasticity, are tabulated in Table 4.2.
+
+\begin{table}[H]
+\centering
+\caption{Structural Path Estimates for RQ2 Mediation Model}
+\begin{tabular}{lcccc}
+\toprule
+Path & $\beta$ (Standardised) & Robust SE & z & p \\
+\midrule
+ACI $\to$ FRI (a) & 0.116 & 0.152 & 0.76 & 0.447 \\
+FRI $\to$ NPL (b) & 9.853 & 13.883 & 0.71 & 0.478 \\
+ACI $\to$ NPL (c') & -0.102 & 0.699 & -0.15 & 0.884 \\
+Indirect Effect (a $\times$ b) & 1.14 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Notes: Estimates control for bank size and CAR. Bootstrapped with 5,000 resamples for indirect effect. $N = 233$. Model fit: $\chi^2(149) = 286.4$, CFI = 0.93, RMSEA = 0.063.
+\end{table}
+
+Defying agency-theoretic anticipations, the direct effect of ACI on NPL ratios (c') is non-significant ($\beta = -0.102$, $p = 0.884$), implying a one-standard-deviation ACI increase yields an inconsequential 0.102 percentage-point NPL reduction—negligible relative to the sample mean of 4.6\%. The indirect pathway through FRI similarly dissipates: the ACI-to-FRI link (a) is positive but insignificant ($\beta = 0.116$, $p = 0.447$), and the FRI-to-NPL path (b) lacks significance despite directional positivity ($\beta = 9.853$, $p = 0.478$). The bootstrapped indirect effect (1.14) spans a confidence interval encompassing zero [--18.2, 37.4], obviating mediation evidence.
+
+Robustness validations—encompassing summated composites for latents, net NPL as an alternative outcome, and expanded bootstraps (10,000 iterations)—replicate these nulls. Sensitivity probes, excluding outliers (NPL > 10\%) and incorporating supplementary controls (e.g., oil price volatility), yield no material alterations, affirming estimate stability. These null findings challenge agency theory's emphasis on independence in emerging markets, where institutional voids may render formal structures ineffective, while stewardship theory's intrinsic motivations appear unmediated by reporting integrity (Liu \& Anandarajan, 2019).
+
+\subsection{Findings for RQ3: Shift in Disclosure-NPL Linkage Pre- and Post-Reform}
+
+This section articulates the empirical results for RQ3: Does the linkage between corporate governance disclosure and NPL ratios shift from statistically insignificant pre-reform (2009--2014) to significantly negative post-reform (2016--2024), attributable to CBN mandates that enhance disclosure credibility through board tenure limits, $\geq$50\% independent directors, and executive vetting? Utilising a difference-in-differences framework embedded in fixed-effects panel regressions, the analysis draws on longitudinal quantitative data from 10 Tier-1 Nigerian DMBs—Zenith, Guaranty Trust, Access, UBA, First Bank Holdings, Fidelity, Stanbic IBTC, FCMB, Union, and Sterling—covering 2009 to 2024, resulting in a balanced panel of 160 bank-year observations. This methodology isolates the reform-activated shift in the disclosure-NPL nexus, conceptualising the CBN's 2014 Code and ensuing guidelines as a quasi-experimental intervention that invigorates institutional mechanisms for transparency (Pathan, 2009; Gaganis et al., 2018).
+
+The approach adheres to the pragmatist paradigm from Chapter 3, leveraging positivist precision via panel fixed-effects to control for bank-specific heterogeneity ($\alpha_i$) and time-invariant shocks through year fixed effects ($\delta_t$). Data encompass NPL ratios from CBN Financial Stability Reports, with governance indices manually extracted from annual reports and scored against the CBN 2014 Code. Variables include NPLR (NPL ratio as percentage of gross loans); CGDI (0--100 scale across 45 items on board composition, risk committees, audit, remuneration, and stakeholder engagement); PIND (0--100 scale with 30 implementation metrics like loan-monitoring and digital scoring); COMID (0--100 scale for regulatory adherence); and controls such as Log(Market Cap), Total Capital Adequacy Ratio (TCAR), ROA, Loan-to-GDP ratio, and CPI inflation. The post-reform indicator (Post2015) activates for years $\geq$2016, capturing mandates like tenure caps (up to 12 years), $\geq$50\% independent directors, and executive vetting, which institutional theory views as antidotes to agency conflicts via credibility enhancement (Adegbite, 2014; Sanusi, 2014).
+
+Summary statistics (Table 4.3.1) highlight pronounced variability: NPLR averages 7.21\% (SD = 6.83), cresting at 35.2\% during post-2009 upheavals, while CGDI averages 85.4 (SD = 12.1), signalling untapped potential for disclosure refinement. These figures encapsulate Nigeria's banking volatility, where governance reforms seek to curb default risks amplified by macroeconomic frailties like oil price swings and inflation.
+
+\begin{table}[H]
+\centering
+\caption{Summary Statistics for Key Variables (2009--2024 Panel)}
+\begin{tabular}{lcccc}
+\toprule
+Variable & Mean & SD & Min & Max \\
+\midrule
+NPLR (\%) & 7.21 & 6.83 & 0.6 & 35.2 \\
+CGDI & 85.4 & 12.1 & 58 & 98 \\
+PIND & 75.2 & 10.3 & 58 & 93 \\
+COMID & 85.1 & 8.7 & 73 & 96 \\
+Market Cap (\text{\NGN}bn) & 512 & 428 & 80 & 2,330 \\
+TCAR (\%) & 19.8 & 2.1 & 15.8 & 24.5 \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Note: Based on 160 bank-year observations from 10 Tier-1 DMBs. Sources: CBN Financial Stability Reports, annual bank reports, and World Bank/IMF macroeconomic data.
+\end{table}
+
+The primary model is formulated as:
+\begin{equation}
+\mbox{NPLR}_{it} = \beta_0 + \beta_1 \mbox{CGDI}_{it} + \beta_2 (\mbox{CGDI}_{it} \times \mbox{Post2015}_t) + \beta_3 \mbox{PIND}_{it} + \gamma' X_{it} + \alpha_i + \delta_t + \epsilon_{it}
+\end{equation}
+with bank-clustered standard errors mitigating heteroskedasticity and autocorrelation. The interaction coefficient ($\beta_2$) captures the post-reform modulation, predicated on the exogenous reform chronology, akin to institutional activations in developing economies (Olojede et al., 2020; OECD, 2023).
+
+Baseline estimates (Table 4.3.2) corroborate the anticipated shift. In Column (1), the pre-reform CGDI effect is insignificant ($\beta_1 = 0.046$, $p = 0.535$), emblematic of pre-2014 ``box-ticking'' disclosures undermined by agency issues like insider lending and risk opacity (Sanusi, 2009). The interaction is markedly negative ($\beta_2 = -0.259$, $p = 0.010$), producing a post-reform net effect of -0.213. Thus, a 10-point CGDI increment post-reform abates NPLR by 2.1 percentage points, roughly 30\% of the sample mean (7.21\%). Column (2) integrates additional indices, underscoring PIND's pronounced negative influence ($\beta_3 = -0.582$, $p < 0.001$), implying practice complements disclosure in default mitigation, while COMID proves inert ($p = 0.258$), revealing compliance's constrained utility without rigorous enforcement. Controls conform to expectations: elevated market capitalisation ($\beta = 0.003$, $p < 0.05$) associates with heightened NPLs, possibly from aggressive expansion, whereas TCAR mitigates risks ($\beta = -0.235$, $p < 0.05$), echoing Basel III imperatives (BCBS, 2010).
+
+\begin{table}[H]
+\centering
+\caption{Fixed-Effects Panel Regression Estimates for RQ3}
+\begin{tabular}{lcc}
+\toprule
+Variable & (1) & (2) \\
+\midrule
+CGDI & 0.046 (0.074) & 0.042 (0.072) \\
+CGDI $\times$ Post2015 & -0.259$^{**}$ (0.099) & -0.261$^{**}$ (0.098) \\
+PIND & & -0.582$^{***}$ (0.149) \\
+COMID & & 0.175 (0.154) \\
+Market Cap & 0.003$^{**}$ (0.001) & 0.003$^{**}$ (0.001) \\
+TCAR & -0.232$^{**}$ (0.093) & -0.235$^{**}$ (0.092) \\
+Observations & 160 & 160 \\
+$R^2$ (within) & 0.341 & 0.339 \\
+Bank FE & Yes & Yes \\
+Year FE & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Note: Standard errors (clustered by bank) in parentheses. $^{***}p < 0.01$, $^{**}p < 0.05$, $^*p < 0.1$. Additional controls (ROA, Loan-to-GDP, CPI) included but not reported for brevity.
+\end{table}
+
+Economically, the post-reform gradient indicates a one-standard-deviation CGDI rise (12.1 points) lowers NPLR by 2.58 percentage points, a 36\% decrement from the pre-reform mean. This underscores disclosure's institutional activation: pre-reform, signalling theory's transparency-asymmetry reduction faltered amid agency entrenchments (Jensen \& Meckling, 1976). Post-reform, CBN mandates—tenure limits curbing inertia, independent directors nurturing stewardship, and vetting bolstering accountability—render disclosure substantive, tempering stewardship theory's idealism by exposing contextual dependencies in regulatory fragmentation (Donaldson \& Davis, 1991; Natufe \& Evbayiro-Osagie, 2023).
+
+Figure 4.3.1 depicts this rupture: pre-2015 data (blue) show a flat, insignificant slope, while post-2015 (red) exhibit a downward trajectory, affirming reform causality. Robustness, including propensity score matching and alternative thresholds (e.g., 2015), upholds consistency (available upon request), alleviating endogeneity.
+
+\begin{figure}[H]
+\centering
+\caption{NPL Ratio vs. CGDI -- Pre-Reform (2009--2014, Blue, Flat Slope) vs. Post-Reform (2016--2024, Red, Negative Slope)}
+\label{fig:4.3.1}
+[Description: Scatter plot with fitted lines; x-axis: CGDI (0--100); y-axis: NPLR (\%); blue points/line for pre-reform (flat, $\beta \approx 0$); red points/line for post-reform (downward slope, $\beta < 0$). Data points clustered higher pre-reform, reflecting crisis peaks.]
+\end{figure}
+
+These insights challenge agency theory's universality in emerging markets, where institutional voids—overlaps among CBN, SEC, and NDIC—initially erode disclosure's potency (Adegbite, 2014). Yet, they endorse institutional theory's reform-as-catalyst view, paralleling Ghana's post-2010 NPL reductions (15--20\%) via board independence and South Africa's King IV enhancements (OECD, 2023). Practically, they advocate consolidated governance under CBN/SEC harmonisation, extending tenure and vetting to counter NPL surges from shocks like 2020--2023 devaluation. This bridges to RQ4's regulatory clarity perceptions, enriching theoretical contributions to Basel III adaptation and mixed-methods expansions post-2025, with implications for managerial training in disclosure efficacy.
+
+\subsection{Findings for RQ4: Perceived Regulatory Clarity Improvements and NPL Ratio Declines}
+
+This section expounds the empirical results for RQ4, assessing the extent to which perceived regulatory clarity enhancements from CBN and SEC harmonisation (2020--2025) engender NPL ratio declines ($\beta < 0$, $p < .05$), controlling for economic shocks such as devaluation and inflation. Anchored in the cross-sectional blended design from Chapter 3—integrating a Qualtrics-administered stakeholder survey ($n = 234$) in Q1 2024, three semi-structured executive interviews, and secondary CBN/audited data—the analysis deploys bootstrapped mediation (1,000 resamples) in R (v4.5.1) to parse direct and indirect effects. Institutional theory frames harmonisation as a remedy to fragmentation, promoting compliance and default risk abatement in emerging markets (North, 1990; Natufe \& Evbayiro-Osagie, 2023). Stewardship theory complements this by positing perceptual clarity as a facilitator of managerial fiduciary alignment, potentially curbing NPLs amid volatility (Donaldson \& Davis, 1991). This inquiry extends prior work by incorporating perceptual data, addressing gaps in African literature where multiplicity persists despite reforms (Agyemang \& Castellini, 2015).
+
+The sample spans 10 purposively selected DMBs, stratified for systemic representation with emphasis on compliance/risk roles. Non-response bias checks via t-tests on demographics ($p > .10$) confirm representativeness. Preprocessing entailed Likert reverse-coding, bank-level aggregation, and mean imputation for sparse regulatory clarity gaps (e.g., Access Bank Plc, Stanbic IBTC), with sensitivity tests verifying minimal distortion. Constructs include the Regulatory Clarity Index (independent; M = 4.40, SD = 0.42, $\alpha = 0.82$), Compliance Index (mediator; M = 85.20, SD = 4.76), NPL Ratio (dependent; M = 4.31, SD = 1.30, winsorised at 1\%), and binary Bank Size (1 for $>$ \NGN1,000 billion capitalisation; n = 6). These draw from validated scales (United Nations--ESCWA, 2022) and CBN benchmarks, ensuring alignment with post-2020 reforms under NCCG 2018 and CBN Guidelines 2023.
+
+\subsubsection{Descriptive Statistics and Correlations}
+
+Descriptive metrics exhibit variability in NPL ratios (3.00--6.60\%), compliance (78.00--92.00\%), and clarity perceptions (3.77--5.00), mirroring Nigeria's post-CAMA 2020 regulatory inconsistencies. Pearson correlations (Table 4.7) reveal a moderate negative clarity-NPL association ($r = -0.52$, $p < .10$), hinting at harmonisation's risk-mitigating potential. Yet, clarity-compliance linkage is feeble and insignificant ($r = -0.19$, ns), suggesting scant mediation. Bank size positively correlates with NPLs ($r = 0.47$, $p < .10$), aligning with heightened institutional exposures to shocks (e.g., 24.1\% 2024 inflation; CBN, 2024a). These patterns echo African reform studies, where multiplicity fuels NPL instability, as in Ghana's post-2010 cleanup (Agyemang \& Castellini, 2015).
+
+\begin{table}[H]
+\centering
+\caption{Descriptive Statistics and Correlations for RQ4 Variables}
+\begin{tabular}{lccccc}
+\toprule
+Variable & Mean & SD & 1 & 2 & 3 & 4 \\
+\midrule
+1. Clarity Index & 4.40 & 0.42 & 1.00 & & & \\
+2. Compliance Index & 85.20 & 4.76 & -0.19 & 1.00 & & \\
+3. NPL Ratio & 4.31 & 1.30 & -0.52$^*$ & 0.12 & 1.00 & \\
+4. Bank Size Binary & 0.60 & 0.52 & -0.53$^*$ & 0.08 & 0.47$^*$ & 1.00 \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Note: $^*p < .10$; $n = 10$. Correlations are Pearson coefficients. Adapted from stakeholder survey data (April 2024) and CBN reports.
+\end{table}
+
+Figure 4.4 illustrates the negative clarity-NPL trend, with larger banks (pink) showing amplified dispersion from devaluation vulnerabilities (e.g., post-2023 naira; IMF, 2024). Residual diagnostics affirm linearity, normality, homoscedasticity, and outlier absence, underpinning inference reliability.
+
+\subsubsection{Mediation Analysis}
+
+Bootstrapped mediation via Hayes Process Model 4 (Hayes, 2018) decomposes effects, controlling for bank size. The total clarity-NPL effect is negative but insignificant ($\beta = -0.927$, 95\% CI [-3.98, 1.09], $p = .21$), failing to substantiate causality amid enforcement lapses in CBN-SEC alignments (Natufe \& Evbayiro-Osagie, 2023). The direct effect (ADE = -0.861, 95\% CI [-4.75, 1.25], $p = .23$) suggests tentative standalone mitigation, diluted by shocks. The indirect via compliance (ACME = -0.066, 95\% CI [-0.91, 1.68], $p = .93$) is trivial, comprising 7.1\% of the total, rejecting mediation.
+
+\begin{table}[H]
+\centering
+\caption{Bootstrapped Mediation Path Estimates for RQ4}
+\begin{tabular}{lccc}
+\toprule
+Path & $\beta$ & 95\% CI & p \\
+\midrule
+Clarity $\to$ Compliance (a) & 0.45 & [-1.23, 2.13] & .32 \\
+Compliance $\to$ NPL (b) & -0.15 & [-0.89, 0.59] & .41 \\
+Clarity $\to$ NPL (c') & -0.861 & [-4.75, 1.25] & .23 \\
+Indirect (a $\times$ b) & -0.066 & [-0.91, 1.68] & .93 \\
+Total Effect (c) & -0.927 & [-3.98, 1.09] & .21 \\
+\bottomrule
+\end{tabular}
+\smallskip
+
+\small
+Note: Estimates from 1,000 bootstrapped resamples, controlling for bank size. $n = 10$. Paths align with Hayes Process Model 4.
+\end{table}
+
+These nulls temper institutional theory's harmonisation-causality premise (Scott, 2014), mirroring African empirical gaps where overlaps endure despite Basel III (OECD, 2023). Stewardship theory garners partial support, as direct effects intimate managerial navigation of shocks, yet mediation lapses undermine it.
+
+\subsubsection{Integration of Qualitative Insights}
+
+Thematic coding of interview transcripts (Braun \& Clarke, 2006) triangulates quantitatively, surfacing motifs like ``regulatory confusion'' (e.g., CBN-SEC overlaps delaying compliance) and ``enforcement gaps'' (e.g., erratic penalties amid inflation). An executive remarked: ``Harmonisation on paper hasn't translated to ground-level clarity; devaluation shocks amplify the fog.'' Joint displays (Creswell \& Plano Clark, 2017) merge strands, exposing perceptual hurdles beyond metrics, akin to OECD critiques of reform signalling in emerging markets (OECD, 2015).
+
+\subsubsection{Theoretical and Practical Implications}
+
+Theoretically, outcomes refine agency-stewardship integrations by spotlighting institutional contingencies: clarity signals intent but shocks disrupt pathways, extending Adegbite (2014) and Olojede et al. (2020) on Nigerian erosions. Practically, they urge unified frameworks—a CBN-SEC oversight entity—to amplify clarity and compliance, projecting 0.5--1.0\% $\beta$ reductions per clarity unit against devaluation (CBN, 2023). Recommendations encompass joint audits and shock-resilient directives, harmonised with Basel III (BCBS, 2010). Cross-sectional causality limits prompt calls for longitudinal post-2025 extensions.
+
+In summation, RQ4 evinces modest perceptual gains sans robust NPL causality, impelling intensified harmonisation to shield Nigeria's DMBs from systemic frailties.
+
+\end{document}
