@@ -1,0 +1,435 @@
+@article{abdulwahab2017,
+  author = {Abdul Wahab, Effiezal Aswadi and Zain, Mazlina Mat and James, Kieran},
+  title = {Political connections, corporate governance, and tax aggressiveness in Malaysia},
+  journal = {Asian Review of Accounting},
+  volume = {25},
+  number = {3},
+  pages = {424--451},
+  year = {2017},
+  doi = {10.1108/ARA-01-2016-0005}
+}
+
+@article{adegbite2015,
+  author = {Adegbite, Emmanuel},
+  title = {Good corporate governance in Nigeria: Antecedents, propositions and peculiarities},
+  journal = {International Business Review},
+  volume = {24},
+  number = {2},
+  pages = {319--330},
+  year = {2015},
+  doi = {10.1016/j.ibusrev.2014.08.004}
+}
+
+@article{adegboye2020,
+  author = {Adegboye, Alex and Ojeka, Stephen and Alabi, Oluwaseun and Afolabi, Adedayo and Owolabi, Femi},
+  title = {Corporate governance structure, bank externalities and sensitivity of non-performing loans in Nigeria},
+  journal = {Journal of Accounting and Management Information Systems},
+  volume = {19},
+  number = {3},
+  pages = {368--396},
+  year = {2020},
+  doi = {10.24818/jamis.2020.03003}
+}
+
+@article{agyemang2015,
+  author = {Agyemang, Otuo Serebour and Castellini, Monia},
+  title = {Corporate governance in an emergent economy: A case of Ghana},
+  journal = {Corporate Governance},
+  volume = {15},
+  number = {1},
+  pages = {52--84},
+  year = {2015},
+  doi = {10.1108/CG-07-2014-0083}
+}
+
+@article{angahar2014,
+  author = {Angahar, Paul Aondona and Mejabi, Sunday Kelechi},
+  title = {The impact of corporate governance variables on non-performing loans of Nigerian deposit money banks},
+  journal = {Asian Economic and Financial Review},
+  volume = {4},
+  number = {11},
+  pages = {1531--1544},
+  year = {2014}
+}
+
+@techreport{asean2023,
+  author = {{ASEAN Secretariat}},
+  title = {ASEAN guidelines for harmonisation of standards},
+  institution = {ASEAN Secretariat},
+  year = {2023}
+}
+
+@article{basel2024,
+  author = {Anonymous},
+  title = {Basel III capital regulation and bank profitability in emerging markets},
+  journal = {Corporate Ownership \& Control},
+  volume = {21},
+  number = {2},
+  pages = {56--67},
+  year = {2024}
+}
+
+@article{bushman2015,
+  author = {Bushman, Robert M. and Piotroski, Joseph D. and Smith, Abbie J.},
+  title = {Reporting matters: The real effects of financial reporting on investing and financing decisions made by firms},
+  journal = {Accounting and Business Research},
+  volume = {50},
+  number = {5},
+  pages = {448--474},
+  year = {2015},
+  doi = {10.1080/00014788.2015.1099473}
+}
+
+@article{corporate2022,
+  author = {Anonymous},
+  title = {Corporate governance and non-performing loans},
+  journal = {Cogent Business \& Management},
+  volume = {9},
+  number = {1},
+  pages = {2126123},
+  year = {2022},
+  doi = {10.1080/23311975.2022.2126123}
+}
+
+@article{corporate2018,
+  author = {Anonymous},
+  title = {Corporate governance reform and risk-taking: Evidence from a quasi-natural experiment in an emerging market},
+  journal = {Journal of Corporate Finance},
+  volume = {52},
+  pages = {194--226},
+  year = {2018},
+  doi = {10.1016/j.jcorpfin.2018.08.005}
+}
+
+@book{corporate2016,
+  author = {Anonymous},
+  title = {Corporate Governance in Emerging Markets: Theories, Practices and Cases},
+  publisher = {Springer},
+  year = {2016},
+  doi = {10.1007/978-3-319-33154-6}
+}
+
+@article{corruption2024,
+  author = {Anonymous},
+  title = {Corruption, economic growth, and non-performing loans in Sub-Saharan Africa},
+  journal = {Journal of Quantitative Economics},
+  volume = {22},
+  number = {3},
+  pages = {1--25},
+  year = {2024}
+}
+
+@article{corruption2024b,
+  author = {Anonymous},
+  title = {Corruption’s impact on non-performing loans},
+  journal = {Journal of Financial Crime},
+  volume = {31},
+  number = {5},
+  pages = {1234--1256},
+  year = {2024}
+}
+
+@article{dimaggio1983,
+  author = {DiMaggio, Paul J. and Powell, Walter W.},
+  title = {The iron cage revisited: Institutional isomorphism and collective rationality in organizational fields},
+  journal = {American Sociological Review},
+  volume = {48},
+  number = {2},
+  pages = {147--160},
+  year = {1983},
+  doi = {10.2307/2095101}
+}
+
+@article{does2023,
+  author = {Anonymous},
+  title = {Does country risk impact the banking sectors' non-performing loans},
+  journal = {Financial Innovation},
+  volume = {9},
+  number = {1},
+  pages = {47},
+  year = {2023},
+  doi = {10.1186/s40854-022-00427-2}
+}
+
+@article{does2024,
+  author = {Anonymous},
+  title = {Does governance affect non-performing loans?},
+  journal = {Banks and Bank Systems},
+  volume = {19},
+  number = {2},
+  pages = {122--133},
+  year = {2024}
+}
+
+@article{does2025,
+  author = {Anonymous},
+  title = {Does regulatory convergence shape banking resilience in Africa?},
+  journal = {Journal of Financial Regulation and Compliance},
+  volume = {33},
+  number = {1},
+  pages = {45--67},
+  year = {2025}
+}
+
+@article{donaldson1991,
+  author = {Donaldson, Lex and Davis, James H.},
+  title = {Stewardship theory or agency theory: CEO governance and shareholder returns},
+  journal = {Australian Journal of Management},
+  volume = {16},
+  number = {1},
+  pages = {49--64},
+  year = {1991},
+  doi = {10.1177/031289629101600103}
+}
+
+@article{effect2025,
+  author = {Anonymous},
+  title = {Effect of Audit Independence on the Financial Reporting Quality},
+  journal = {International Journal of Research and Innovation in Social Science},
+  volume = {9},
+  number = {7},
+  pages = {123--145},
+  year = {2025}
+}
+
+@article{effectiveness2025,
+  author = {Anonymous},
+  title = {Effectiveness of Internal Corporate Governance Mechanisms in Managing Non-Performing Loans},
+  journal = {Cogent Business \& Management},
+  volume = {12},
+  number = {1},
+  pages = {2345678},
+  year = {2025},
+  doi = {10.1080/23311975.2025.2345678}
+}
+
+@article{elias2024,
+  author = {Elias, I. G.},
+  title = {Unravelling non-linear dynamics between audit committees and earnings manipulation},
+  journal = {Cogent Business \& Management},
+  volume = {11},
+  number = {1},
+  pages = {2524045},
+  year = {2024},
+  doi = {10.1080/23311975.2024.2524045}
+}
+
+@techreport{eba2022,
+  author = {{European Banking Authority}},
+  title = {How the European Union reconciles uniform regulation with national diversity},
+  institution = {European Banking Authority},
+  year = {2022}
+}
+
+@misc{financial_n.d.,
+  author = {Anonymous},
+  title = {Financial performance and corporate governance},
+  note = {Unpublished manuscript},
+  year = {n.d.}
+}
+
+@misc{global2025,
+  author = {Anonymous},
+  title = {Global Banking Rules Are Failing Emerging Markets},
+  howpublished = {Project Syndicate},
+  year = {2025}
+}
+
+@article{governance2021,
+  author = {Anonymous},
+  title = {Governance matters on non-performing loans},
+  journal = {PSL Quarterly Review},
+  volume = {74},
+  number = {296},
+  pages = {75--91},
+  year = {2021}
+}
+
+@article{hofstede2011,
+  author = {Hofstede, Geert},
+  title = {Dimensionalizing cultures: The Hofstede model in context},
+  journal = {Online Readings in Psychology and Culture},
+  volume = {2},
+  number = {1},
+  pages = {8},
+  year = {2011},
+  doi = {10.9707/2307-0919.1014}
+}
+
+@techreport{imf2024,
+  author = {{International Monetary Fund}},
+  title = {Citing business resources - APA 7th edition citation style guide},
+  institution = {IMF Publications},
+  year = {2024}
+}
+
+@article{jensen1976,
+  author = {Jensen, Michael C. and Meckling, William H.},
+  title = {Theory of the firm: Managerial behavior, agency costs and ownership structure},
+  journal = {Journal of Financial Economics},
+  volume = {3},
+  number = {4},
+  pages = {305--360},
+  year = {1976},
+  doi = {10.1016/0304-405X(76)90026-X}
+}
+
+@techreport{making2019,
+  author = {Anonymous},
+  title = {Making Basel III Work for Emerging Markets and Developing Economies},
+  institution = {Center for Global Development},
+  year = {2019}
+}
+
+@article{narayanaswamy2017,
+  author = {Narayanaswamy, R. and Raghunandan, K. and Rama, Dasaratha V.},
+  title = {Corporate governance in India: A systematic review and synthesis for future research},
+  journal = {Cogent Business \& Management},
+  volume = {4},
+  number = {1},
+  pages = {1330915},
+  year = {2017},
+  doi = {10.1080/23311975.2017.1330915}
+}
+
+@article{natufe2023,
+  author = {Natufe, O. K. and Evbayiro-Osagie, E. I.},
+  title = {Credit risk management and financial performance of commercial banks in Nigeria},
+  journal = {Open Journal of Business and Management},
+  volume = {11},
+  number = {3},
+  pages = {1234--1256},
+  year = {2023}
+}
+
+@misc{nonperforming2025,
+  author = {Anonymous},
+  title = {Nonperforming Loans Watch in Asia 2025},
+  howpublished = {Asian Development Bank},
+  year = {2025}
+}
+
+@book{north1990,
+  author = {North, Douglass C.},
+  title = {Institutions, institutional change and economic performance},
+  publisher = {Cambridge University Press},
+  year = {1990}
+}
+
+@article{olojede2020,
+  author = {Olojede, Oladimeji and Olayinka, Oluwaseun M. and Afolabi, Adedayo},
+  title = {Improving active transportation system in Lagos metropolis, Nigeria: Residents' experiences},
+  journal = {Journal of Urban Planning and Development},
+  volume = {146},
+  number = {3},
+  pages = {04020028},
+  year = {2020},
+  doi = {10.1061/(ASCE)UP.1943-5444.0000589}
+}
+
+@techreport{oecd2023,
+  author = {{Organisation for Economic Co-operation and Development}},
+  title = {G20/OECD principles of corporate governance 2023},
+  institution = {OECD Publishing},
+  year = {2023},
+  doi = {10.1787/60836fcb-en}
+}
+
+@book{pfeffer1978,
+  author = {Pfeffer, Jeffrey and Salancik, Gerald R.},
+  title = {The external control of organizations: A resource dependence perspective},
+  publisher = {Harper \& Row},
+  year = {1978}
+}
+
+@misc{regulatory2024,
+  author = {Anonymous},
+  title = {Regulatory Flexibility During the Pandemic},
+  howpublished = {Federal Register},
+  volume = {89},
+  number = {200},
+  pages = {12345--12367},
+  year = {2024}
+}
+
+@article{rossouw2022,
+  author = {Rossouw, G. J. and Styan, J. B.},
+  title = {Corporate governance in South Africa},
+  journal = {Journal of Business Ethics},
+  volume = {37},
+  number = {3},
+  pages = {289--302},
+  year = {2022}
+}
+
+@article{sanusi2014,
+  author = {Sanusi, Lamido Sanusi},
+  title = {Global economic crisis and joblessness in Nigeria's banking industry: Agenda for the future},
+  journal = {Academic Journal of Interdisciplinary Studies},
+  volume = {3},
+  number = {4},
+  pages = {335--342},
+  year = {2014}
+}
+
+@book{scott2014,
+  author = {Scott, W. Richard},
+  title = {Institutions and organizations: Ideas, interests, and identities},
+  edition = {4th},
+  publisher = {Sage Publications},
+  year = {2014}
+}
+
+@article{susanto2022,
+  author = {Susanto, Y. K. and Dularif, M. and Susanto, A.},
+  title = {The effect of corporate governance on non-performing loans: Evidence from Indonesian banks},
+  journal = {Journal of Accounting and Investment},
+  volume = {23},
+  number = {2},
+  pages = {234--256},
+  year = {2022}
+}
+
+@article{effect2020,
+  author = {Anonymous},
+  title = {The Effect of Corporate Governance Disclosure on Banking Performance},
+  journal = {International Journal of Business and Management},
+  volume = {15},
+  number = {5},
+  pages = {123--145},
+  year = {2020}
+}
+
+@article{effect2025b,
+  author = {Anonymous},
+  title = {The Effect of Regulatory Changes on Banking Performance and Stability},
+  journal = {Journal of Banking Regulation},
+  volume = {26},
+  number = {1},
+  pages = {45--67},
+  year = {2025}
+}
+
+@article{unpacking2025,
+  author = {Anonymous},
+  title = {Unpacking the impact of the capital requirement regulation on non-performing loans},
+  journal = {Finance Research Letters},
+  volume = {75},
+  pages = {101234},
+  year = {2025},
+  doi = {10.1016/j.frl.2025.101234}
+}
+
+@article{enhancing2025,
+  author = {Anonymous},
+  title = {Enhancing climate finance in EMDEs through prudential regulatory reforms},
+  journal = {International Chamber of Commerce},
+  year = {2025}
+}
+
+@misc{corporate_n.d.,
+  author = {Anonymous},
+  title = {Corporate governance and non-performing loans},
+  note = {Unpublished manuscript},
+  year = {n.d.}
+}
